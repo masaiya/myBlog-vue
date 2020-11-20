@@ -1,13 +1,12 @@
 <template>
-  <div class="header">
-    <div class="header-left"></div>
-    <div class="header-right"></div>
+  <div class="register">
+    
   </div>
 </template>
 
 <script>
 export default {
-  name: 'header',
+  name: 'register',
   data() {
     return {
     };

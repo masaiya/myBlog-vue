@@ -1,15 +1,14 @@
 <template>
   <div id="app">
-    <p class="green">yellowgreen</p>
-    <Header></Header>
-    <!-- <router-view/> -->
-    <Footer></Footer>
+    <BlogHeader></BlogHeader>
+    <router-view></router-view>
+    <BlogFooter></BlogFooter>
   </div>
 </template>
 
 <script>
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import BlogHeader from "./components/BlogHeader";
+import BlogFooter from "./components/BlogFooter";
 export default {
   name: 'app',
   data() {
@@ -17,8 +16,8 @@ export default {
     };
   },
   components: {
-    Header,
-    Footer
+    BlogHeader,
+    BlogFooter
   }
 };
 </script>

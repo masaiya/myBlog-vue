@@ -1,5 +1,10 @@
 /* eslint-disable no-console */
-
+/**
+ * registerServiceWorker：
+ * 作用：离线缓存
+ * 在线上，只要访问过一次该项目，以后即使没有网络也可以访问（此时使用的是之前缓存的资源），只在生产环境中有效。
+ * process.env.NODE_ENV === 'production'
+ */
 import { register } from 'register-service-worker'
 
 if (process.env.NODE_ENV === 'production') {
