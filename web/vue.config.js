@@ -72,10 +72,11 @@ module.exports = {
       .end();
   },
   devServer: {
-    host: 'localhost',
-    port: 3000,
+    open: true, //是否自动弹出浏览器页面
+    host: "localhost",
+    port: '3001',
     https: false,
-    open: true,
-    proxy: null
+    hotOnly: false,
+    // proxy: 'http://localhost:3000'
   }
 }

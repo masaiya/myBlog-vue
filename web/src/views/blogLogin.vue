@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    
+    hello 我是login
   </div>
 </template>
 

@@ -63,9 +63,13 @@ export default {
     flex: 2;
     display: flex;
     justify-content: center;
-    .logo {
-      width: 140px;
-      line-height: 50px;
+    a {
+      display: flex;
+      justify-content: center;
+      .logo {
+        width: 140px;
+        line-height: 50px;
+      }
     }
   }
   .header-right {

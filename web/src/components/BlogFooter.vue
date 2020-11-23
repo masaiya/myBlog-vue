@@ -45,11 +45,15 @@ export default {
     flex: 1;
     display: flex;
     justify-content: center;
-    .logo {
-      width: 100px;
-      line-height: 40px;
-      margin: 0 auto;
+    a {
+      display: flex;
+      justify-content: center;
+      .logo {
+        width: 100px;
+        vertical-align: middle;
+      }
     }
+    
   }
   .footer-right {
     flex: 1;
