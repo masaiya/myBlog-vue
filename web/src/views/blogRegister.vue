@@ -3,7 +3,7 @@
     <h2>注册信息</h2>
     <!-- 表单具有默认的提交行为，默认是同步的，同步表单提交，浏览器会锁死等待服务端的响应结果 
           同步表单提交，浏览器会默认把客户端响应的内容渲染页面-->
-    <form id="register_form">
+    <form id="register_form" onsubmit="return false;">
       <div class="input-group cell">
         <span class="input-group-addon">邮箱:</span>
         <input type="email" class="form-control" placeholder="请输入邮箱" name="email" v-model="user.email">
@@ -44,27 +44,29 @@ export default {
   watch:{
   },
   methods: {
-    // register() {
-    //   console.log(this.$axios);
-    //   this.axios({
-    //     method: 'post',
-    //     url: '/register'
-    //   }).then(res => {
-    //     console.log(res);
-    //   }).catch(err => {
-    //     console.log(err);
-    //   })
-    // }
+    register() {
+      this.$axios({
+        method: 'post',
+        url: 'http://127.0.0.1:3000/register',
+        data: {
+          email: this.user.email,
+          password: this.user.password
+        },
+        datatype: 'json',
+        // data: this.user,
+        headers: {
+          // 'Content-Type':'application/x-www-form-urlencoded'
+          'Content-Type':'application/json'
+        }
+      }).then(res => {
+        console.log("res:::");
+        console.log(res);
+      }).catch(err => {
+        console.log(err);
+      })
+    }
   },
   mounted() {
-    this.$axios({
-      method: 'post',
-      url: 'http://127.0.0.1:3000/register'
-    }).then(res => {
-      console.log(res);
-    }).catch(err => {
-      console.log(err);
-    })
   }
 };
 </script>

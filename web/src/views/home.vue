@@ -5,7 +5,7 @@
       <li class="media">
         <div class="media-left">
           <a href="#">
-            <img width="40" height="40" class="media-object" src="/public/img/avatar-max-img.png" alt="...">
+            <img width="40" height="40" class="media-object" src="" alt="">
           </a>
         </div>
         <div class="media-body">
