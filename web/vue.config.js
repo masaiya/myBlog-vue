@@ -78,5 +78,11 @@ module.exports = {
     https: false,
     hotOnly: false,
     // proxy: 'http://localhost:3000'
+    proxy: {
+      '/register': {
+          target: 'http://localhost:3000',
+          changeOrigin: true
+      }
+  }
   }
 }

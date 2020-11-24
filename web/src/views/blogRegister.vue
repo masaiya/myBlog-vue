@@ -1,8 +1,8 @@
 <template>
   <div class="blogRegister">
-    <h2>注册信息</h2>
+    <h2>注册</h2>
     <!-- 表单具有默认的提交行为，默认是同步的，同步表单提交，浏览器会锁死等待服务端的响应结果 
-          同步表单提交，浏览器会默认把客户端响应的内容渲染页面-->
+         同步表单提交，浏览器会默认把客户端响应的内容渲染页面-->
     <form id="register_form" onsubmit="return false;">
       <div class="input-group cell">
         <span class="input-group-addon">邮箱:</span>
@@ -12,7 +12,7 @@
       <br>
       <div class="input-group cell">
         <span class="input-group-addon">密码:</span>
-        <input type="password" autocomplete="off" class="form-control" placeholder="请输入密码" name="password" v-model="user.password">
+        <input type="password" class="form-control" placeholder="请输入密码" name="password" v-model="user.password">
       </div>
 
       <div class="input-group subBtn">
@@ -47,26 +47,30 @@ export default {
     register() {
       this.$axios({
         method: 'post',
-        url: 'http://127.0.0.1:3000/register',
+        url: 'http://localhost:3000/register',
         data: {
           email: this.user.email,
           password: this.user.password
         },
         datatype: 'json',
-        // data: this.user,
         headers: {
-          // 'Content-Type':'application/x-www-form-urlencoded'
           'Content-Type':'application/json'
         }
       }).then(res => {
-        console.log("res:::");
-        console.log(res);
+        var code = res.data.err_code;
+        if(code === 0) {
+          window.alert('注册成功');
+          window.location.href = './login';
+        } else if(code === 1) {
+          window.alert('该邮箱已存在');
+          window.location.href = './login';
+        } else {
+          window.alert('访问人数过多，请稍后再试');
+        }
       }).catch(err => {
         console.log(err);
       })
     }
-  },
-  mounted() {
   }
 };
 </script>
