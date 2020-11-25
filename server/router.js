@@ -1,10 +1,12 @@
 var express = require('express');
 const User = require('./models/user');
+const Topic = require('./models/topic');
 var router = express.Router();
 var md5 = require('md5');
 
-router.get('/', function(req, res) {
-  res.send('首页')
+router.get('/', async function(req, res) {
+  var topics = await Topic.find();
+  res.send(topics);
 })
 router.post('/register', async function (req, res, next) {
   var body = req.body;

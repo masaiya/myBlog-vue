@@ -19,10 +19,10 @@
       </ul>
       <ul v-else class="list">
         <li class="navbar-list">
-          <a href="/login">登录</a>
+          <a href="/bloglogin">登录</a>
         </li>
         <li class="navbar-list">
-          <a href="/register">注册</a>
+          <a href="/blogregister">注册</a>
         </li>
       </ul>
     </div>

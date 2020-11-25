@@ -18,7 +18,7 @@
         <a href="/" class="btn btn-danger" id="cancel">取消</a>
       </div>
       <div class="input-group tip">
-        <span>没有账号？<a href="/register">点击创建</a></span>
+        <span>没有账号？<a href="/blogregister">点击创建</a></span>
         <span>
             <a href="/">返回首页</a>
         </span>

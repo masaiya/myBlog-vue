@@ -11,17 +11,17 @@ const routes = [
   {
     path: '/home',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "about" */ '../views/home.vue')
+    component: () => import(/* webpackChunkName: "home" */ '../views/home.vue')
   },
   {
-    path: '/register',
-    name: 'Register',
-    component: () => import(/* webpackChunkName: "about" */ '../views/blogRegister.vue')
-  }, 
-  {
-    path: '/login',
+    path: '/bloglogin',
     name: 'Login',
-    component: () => import(/* webpackChunkName: "about" */ '../views/blogLogin.vue')
+    component: () => import(/* webpackChunkName: "login" */ '../views/blogLogin.vue')
+  },
+  {
+    path: '/blogregister',
+    name: 'Register',
+    component: () => import(/* webpackChunkName: "register" */ '../views/blogRegister.vue')
   }
   // {
   //   path: '/about',

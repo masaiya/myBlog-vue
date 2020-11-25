@@ -21,7 +21,7 @@
       </div>
       <div class="input-group tip">
         <span>已有账号？
-          <a href="/login">点击登录</a>
+          <a href="/bloglogin">点击登录</a>
         </span>
         <span>
           <a href="/">返回首页</a>
@@ -60,10 +60,10 @@ export default {
         var code = res.data.err_code;
         if(code === 0) {
           window.alert('注册成功');
-          window.location.href = './login';
+          window.location.href = './bloglogin';
         } else if(code === 1) {
           window.alert('该邮箱已存在');
-          window.location.href = './login';
+          window.location.href = './bloglogin';
         } else {
           window.alert('访问人数过多，请稍后再试');
         }
