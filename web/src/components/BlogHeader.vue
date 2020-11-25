@@ -40,12 +40,6 @@ export default {
   computed:{
   },
   watch:{
-  },
-  methods: {
-    // async getArchive() {
-    //   const res = await this.$http.post("/register");
-    //   this.model = res.data;
-    // }
   }
 };
 </script>
